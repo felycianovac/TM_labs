@@ -135,9 +135,6 @@ GameObject:
   - component: {fileID: 6660977}
   - component: {fileID: 6660976}
   - component: {fileID: 6660975}
-  - component: {fileID: 6660979}
-  - component: {fileID: 6660978}
-  - component: {fileID: 6660980}
   m_Layer: 5
   m_Name: ButtonsMenu
   m_TagString: Untagged
@@ -230,48 +227,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &6660978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8e8449f464843945838ccf8f3b677c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wantedColor: {r: 0.34901962, g: 0.34901962, b: 0.3882353, a: 1}
-  button: {fileID: 1936785742}
---- !u!114 &6660979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8e8449f464843945838ccf8f3b677c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wantedColor: {r: 0.34847814, g: 0.34847814, b: 0.38679248, a: 1}
-  button: {fileID: 258926116}
---- !u!114 &6660980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8e8449f464843945838ccf8f3b677c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wantedColor: {r: 0.34901962, g: 0.34901962, b: 0.3882353, a: 1}
-  button: {fileID: 99684898}
 --- !u!1 &52691676
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +325,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.25490198, g: 0.38039216, b: 0.38039216, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -388,25 +343,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1252851483}
+  m_TargetGraphic: {fileID: 99684899}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 99684901}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: QuitGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6660980}
-        m_TargetAssemblyTypeName: ButtonColorChanger, Assembly-CSharp
-        m_MethodName: ChangeButtonColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -864,7 +807,6 @@ GameObject:
   - component: {fileID: 258926117}
   - component: {fileID: 258926116}
   - component: {fileID: 258926119}
-  - component: {fileID: 258926120}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -913,9 +855,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.25, g: 0.2264151, b: 0.2264151, a: 1}
-    m_HighlightedColor: {r: 0.25591847, g: 0.3820755, b: 0.3820755, a: 1}
-    m_PressedColor: {r: 0.25490198, g: 0.38039216, b: 0.38039216, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -932,25 +874,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1117759677}
+  m_TargetGraphic: {fileID: 258926117}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 258926119}
         m_TargetAssemblyTypeName: StartGameButton, Assembly-CSharp
         m_MethodName: StartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6660979}
-        m_TargetAssemblyTypeName: ButtonColorChanger, Assembly-CSharp
-        m_MethodName: ChangeButtonColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1011,21 +941,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStartScene: 1
---- !u!114 &258926120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258926114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.4117647}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!1 &644708912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,8 +2244,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.25490198, g: 0.38039216, b: 0.38039216, a: 1}
-    m_PressedColor: {r: 0.25490198, g: 0.38039216, b: 0.38039216, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2347,7 +2262,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 822595684}
+  m_TargetGraphic: {fileID: 1936785743}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2355,18 +2270,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 6660978}
-        m_TargetAssemblyTypeName: ButtonColorChanger, Assembly-CSharp
-        m_MethodName: ChangeButtonColor
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
