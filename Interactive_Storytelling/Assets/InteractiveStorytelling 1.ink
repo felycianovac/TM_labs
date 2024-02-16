@@ -9,7 +9,11 @@ VAR knows_artifact_legend=false
 ==Introduction==
 Sudden artefact signal appeared on ship's radar. Alex decides to investigate the planet it emerges from, and finds an artefact of mysterious origin. Return back to the ship
 *[Continue]
+<<<<<<< Updated upstream:Interactive_Storytelling/Assets/InteractiveStorytelling.ink
 ->VarekIntroduction
+=======
+->VarekIntroduction 
+>>>>>>> Stashed changes:Interactive_Storytelling/Assets/InteractiveStorytelling 1.ink
     -> END
 ==VarekIntroduction==
 Suddenly, on the screen in the ship appears a new signal - call from a guy named "Varek". You decide to answer the call and Varek asks you to give him the artefact on friendly terms (pe cale pasnica).
@@ -19,7 +23,9 @@ Suddenly, on the screen in the ship appears a new signal - call from a guy named
 ->END
 
 ==GiveArtefact==
-You decide to follow Varek's Instructions. You try to say him that you want to collaborate and give him the artefact, but something you is stopping you - you cant accept his offer. Are you sure about that?
+You decide to follow Varek's Instructions. You try to say him that you want to collaborate and give him the artefact, but something you is stopping you - you cant accept his offer.
+
+Are you sure about that?
 *[Yes]->WorstEnding
 *[No]->VarekIntroduction
 ->END
