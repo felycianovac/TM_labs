@@ -11,6 +11,9 @@ public class DialogueWindow : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _displayText; // Assuming this is the correct name for text display
     [SerializeField] private GameObject _dialogueWindow;
     [SerializeField, Range(0f, 20f)] private float _cooldownNewLetter;
+    [SerializeField] private TextMeshProUGUI _displayEngineering;
+    [SerializeField] private TextMeshProUGUI _displayCombat;
+    [SerializeField] private TextMeshProUGUI _displayDiplomacy;
 
     private DialogueChoice _dialogueChoice;
 
@@ -89,6 +92,7 @@ public class DialogueWindow : MonoBehaviour
     {
         string line = story.Continue();
         ClearText();
+        UpdateSkillDisplays(story);
         _dialogueChoice.HideChoices();
         CanContinueToNextLine = false;
         bool isAddingRichText = false;
@@ -119,4 +123,29 @@ public class DialogueWindow : MonoBehaviour
         CanContinueToNextLine = true;
         IsStatusAnswer = _dialogueChoice.DisplayChoices(story);
     }
+
+    public void UpdateSkillDisplays(Story story)
+{
+    // Attempt to retrieve each skill value. If the variable doesn't exist, it will return null.
+    object engValue = story.variablesState["eng"];
+    object comValue = story.variablesState["com"];
+    object dipValue = story.variablesState["dip"];
+
+    // Update the display if the variable exists and is not null.
+    if (_displayEngineering != null && engValue != null)
+    {
+        _displayEngineering.text = engValue.ToString();
+    }
+    
+    if (_displayCombat != null && comValue != null)
+    {
+        _displayCombat.text = comValue.ToString();
+    }
+    
+    if (_displayDiplomacy != null && dipValue != null)
+    {
+        _displayDiplomacy.text =  dipValue.ToString();
+    }
+
+}
 }
