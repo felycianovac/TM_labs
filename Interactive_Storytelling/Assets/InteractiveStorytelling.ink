@@ -19,9 +19,7 @@ Suddenly, on the screen in the ship appears a new signal - call from a guy named
 ->END
 
 ==GiveArtefact==
-You decide to follow Varek's Instructions. You try to say him that you want to collaborate and give him the artefact, but something you is stopping you - you cant accept his offer.
-
-Are you sure about that?
+You decide to follow Varek's Instructions. You try to say him that you want to collaborate and give him the artefact, but something you is stopping you - you cant accept his offer. Are you sure about that?
 *[Yes]->WorstEnding
 *[No]->VarekIntroduction
 ->END
