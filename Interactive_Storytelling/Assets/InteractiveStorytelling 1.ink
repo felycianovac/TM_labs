@@ -9,7 +9,7 @@ VAR knows_artifact_legend=false
 ==Introduction==
 As the ship hums quietly against the backdrop of the cosmos, I take a moment to reflect. "I'm Alex," I think to myself, "a spacefarer, a seeker of the lost and the hidden. I left the familiar behind a long time ago, chasing whispers on the edge of the unknown. Some call it a lonely path, but out here, among the stars, I'm more at home than I ever was on solid ground." <br>The Oddyssey, my trusty vessel, has been more than just a ship to me. "Just me and you, Zara" I say, glancing at the AI's interface that lights up in response.<br>It's funny how the vastness of space can make you introspective. Each planet, each asteroid field, every nebula I've encountered, has been a teacher of sorts. I've learned about resilience in the face of the eternal night, about wonder, and about the kind of peace you can only find when you're light-years away from everything else.
 *[Continue]
-->VarekIntroduction #image1
+->VarekIntroduction 
     -> END
 ==VarekIntroduction==
 Suddenly, on the screen in the ship appears a new signal - call from a guy named "Varek". You decide to answer the call and Varek asks you to give him the artefact on friendly terms (pe cale pasnica).
