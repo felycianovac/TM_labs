@@ -773,12 +773,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 613392919}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 613392919}
+  m_maskType: 0
 --- !u!23 &613392919
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2639,7 +2639,10 @@ MonoBehaviour:
   _displayName: {fileID: 0}
   _displayText: {fileID: 73793474}
   _dialogueWindow: {fileID: 613392912}
-  _cooldownNewLetter: 0.05
+  _cooldownNewLetter: 0.07
+  _displayEngineering: {fileID: 2054999664}
+  _displayCombat: {fileID: 820012069}
+  _displayDiplomacy: {fileID: 1429144253}
 --- !u!114 &1778995433
 MonoBehaviour:
   m_ObjectHideFlags: 0
