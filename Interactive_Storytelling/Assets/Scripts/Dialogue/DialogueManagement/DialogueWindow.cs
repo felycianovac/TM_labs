@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Ink.Runtime;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(DialogueChoice))]
 public class DialogueWindow : MonoBehaviour
@@ -14,6 +15,48 @@ public class DialogueWindow : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _displayEngineering;
     [SerializeField] private TextMeshProUGUI _displayCombat;
     [SerializeField] private TextMeshProUGUI _displayDiplomacy;
+    [SerializeField] private Image _changeBackgroundImage; // Reference to the UI Image component for the background
+    [SerializeField] private Image _changeBlurImage;
+
+    [SerializeField] private Sprite introduction;
+    [SerializeField] private Sprite introductionBlurr;
+    [SerializeField] private Sprite artefactIntro;
+    [SerializeField] private Sprite artefactIntroBlurr;
+    [SerializeField] private Sprite varekintro;
+    [SerializeField] private Sprite varekintroBlurr;
+    [SerializeField] private Sprite giveArtefact;
+    [SerializeField] private Sprite giveArtefactBlurr;
+    [SerializeField] private Sprite worstEnding;
+    [SerializeField] private Sprite worstEndingBlurr;
+    [SerializeField] private Sprite zaraStealing;
+    [SerializeField] private Sprite zaraStealingBlurr;
+    [SerializeField] private Sprite trackVarek;
+    [SerializeField] private Sprite trackVarekBlurr;
+    [SerializeField] private Sprite investigateArtefact;
+    [SerializeField] private Sprite investigateArtefactBlurr;
+    [SerializeField] private Sprite acceptOffer;
+    [SerializeField] private Sprite acceptOfferBlurr;
+    [SerializeField] private Sprite declineOffer;
+    [SerializeField] private Sprite declineOfferBlurr;
+    [SerializeField] private Sprite developTool;
+    [SerializeField] private Sprite developToolBlurr;
+    [SerializeField] private Sprite integrateShip;
+    [SerializeField] private Sprite integrateShipBlurr;
+    [SerializeField] private Sprite pirates;
+    [SerializeField] private Sprite piratesBlurr;
+    [SerializeField] private Sprite trickPirates;
+    [SerializeField] private Sprite trickPiratesBlurr;
+    [SerializeField] private Sprite fightPirates;
+    [SerializeField] private Sprite fightPiratesBlurr;
+    [SerializeField] private Sprite negotiatePeace;
+    [SerializeField] private Sprite negotiatePeaceBlurr;
+    [SerializeField] private Sprite combatUpgrade;
+    [SerializeField] private Sprite combatUpgradeBlurr;
+    [SerializeField] private Sprite recruitPirate;
+    [SerializeField] private Sprite recruitPirateBlurr;
+    [SerializeField] private Sprite developCounter;
+    [SerializeField] private Sprite developCounterBlurr;
+
 
     private DialogueChoice _dialogueChoice;
 
@@ -93,6 +136,7 @@ public class DialogueWindow : MonoBehaviour
         string line = story.Continue();
         ClearText();
         UpdateSkillDisplays(story);
+        UpdateBackgroundImage(story);
         _dialogueChoice.HideChoices();
         CanContinueToNextLine = false;
         bool isAddingRichText = false;
@@ -148,4 +192,94 @@ public class DialogueWindow : MonoBehaviour
     }
 
 }
+    public void UpdateBackgroundImage(Story story){
+        object sceneSettingObj = story.variablesState["sceneSetting"];
+        string sceneSetting = sceneSettingObj.ToString();
+        Debug.Log($"Current sceneSetting: {sceneSetting}");
+        if (sceneSetting != null) {
+            switch (sceneSetting) {
+                case "default":
+                    break;
+                case "introduction":
+                    _changeBackgroundImage.sprite = introduction;
+                    _changeBlurImage.sprite = introductionBlurr;
+                    break;
+                case "artefactIntro":
+                    _changeBackgroundImage.sprite = artefactIntro;
+                    _changeBlurImage.sprite = artefactIntroBlurr;
+                    break;
+                case "varekintro":
+                    _changeBackgroundImage.sprite = varekintro;
+                    _changeBlurImage.sprite = varekintroBlurr;
+                    break;
+                case "giveArtefact":
+                    _changeBackgroundImage.sprite = giveArtefact;
+                    _changeBlurImage.sprite = giveArtefactBlurr;
+                    break;
+                case "worstEnding":
+                    _changeBackgroundImage.sprite = worstEnding;
+                    _changeBlurImage.sprite = worstEndingBlurr;
+                    break;
+                case "zaraStealing":
+                    _changeBackgroundImage.sprite = zaraStealing;
+                    _changeBlurImage.sprite = zaraStealingBlurr;
+                    break;
+                case "trackVarek":
+                    _changeBackgroundImage.sprite = trackVarek;
+                    _changeBlurImage.sprite = trackVarekBlurr;
+                    break;
+                case "investigateArtefact":
+                    _changeBackgroundImage.sprite = investigateArtefact;
+                    _changeBlurImage.sprite = investigateArtefactBlurr;
+                    break;
+                case "acceptOffer":
+                    _changeBackgroundImage.sprite = acceptOffer;
+                    _changeBlurImage.sprite = acceptOfferBlurr;
+                    break;
+                case "declineOffer":
+                    _changeBackgroundImage.sprite = declineOffer;
+                    _changeBlurImage.sprite = declineOfferBlurr;
+                    break;
+                case "developTool":
+                    _changeBackgroundImage.sprite = developTool;
+                    _changeBlurImage.sprite = developToolBlurr;
+                    break;
+                case "integrateShip":
+                    _changeBackgroundImage.sprite = integrateShip;
+                    _changeBlurImage.sprite = integrateShipBlurr;
+                    break;
+                case "pirates":
+                    _changeBackgroundImage.sprite = pirates;
+                    _changeBlurImage.sprite = piratesBlurr;
+                    break;
+                case "trickPirates":
+                    _changeBackgroundImage.sprite = trickPirates;
+                    _changeBlurImage.sprite = trickPiratesBlurr;
+                    break;
+                case "fightPirates":
+                    _changeBackgroundImage.sprite = fightPirates;
+                    _changeBlurImage.sprite = fightPiratesBlurr;
+                    break;
+                case "negotiatePeace":
+                    _changeBackgroundImage.sprite = negotiatePeace;
+                    _changeBlurImage.sprite = negotiatePeaceBlurr;
+                    break;
+                case "combatUpgrade":
+                    _changeBackgroundImage.sprite = combatUpgrade;
+                    _changeBlurImage.sprite = combatUpgradeBlurr;
+                    break;
+                case "recruitPirate":
+                    _changeBackgroundImage.sprite = recruitPirate;
+                    _changeBlurImage.sprite = recruitPirateBlurr;
+                    break;
+                case "developCounter":
+                    _changeBackgroundImage.sprite = developCounter;
+                    _changeBlurImage.sprite = developCounterBlurr;
+                    break;
+            }
+        } else {
+            Debug.LogWarning("sceneSetting variable not found or is null in Ink story.");
+        }
+
+    }
 }
