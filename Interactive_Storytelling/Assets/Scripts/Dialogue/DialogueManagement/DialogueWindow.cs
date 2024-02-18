@@ -293,7 +293,7 @@ public class DialogueWindow : MonoBehaviour
                     _changeBackgroundImage.sprite = introduction;
                     _changeBlurImage.sprite = introductionBlurr;
                     break;
-                case "artefactIntro":
+                case "artifactintro":
                     _changeBackgroundImage.sprite = artefactIntro;
                     _changeBlurImage.sprite = artefactIntroBlurr;
                     break;
