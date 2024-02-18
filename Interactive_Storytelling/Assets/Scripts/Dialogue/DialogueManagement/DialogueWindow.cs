@@ -460,8 +460,14 @@ public class DialogueWindow : MonoBehaviour
         object sceneMusicObj = story.variablesState["music"];
         string sceneMusic = sceneMusicObj.ToString();
         Debug.Log($"Current sceneMusic: {sceneMusic}");
+
         if (sceneMusic != null)
         {
+             if (_changeSceneMusic.clip != null && _changeSceneMusic.clip.name == sceneMusic && _changeSceneMusic.isPlaying)
+            {
+            // The same music is already playing, so do nothing
+                return;
+            }
             switch (sceneMusic)
             {
                 case "intro":

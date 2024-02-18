@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
 
-   void Strat(){
+   void Start(){
 
    }
 
