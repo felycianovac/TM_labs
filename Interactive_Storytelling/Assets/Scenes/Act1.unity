@@ -2938,10 +2938,44 @@ MonoBehaviour:
   _displayDiplomacy: {fileID: 1429144253}
   _changeSceneMusic: {fileID: 462184891}
   intro: {fileID: 8300000, guid: c5b4831268835464da3040b1875de8fc, type: 3}
-  artifactintro: {fileID: 8300000, guid: e7c27859027658e41a21b6070fa2b098, type: 3}
+  artifactintro: {fileID: 8300000, guid: 789201a1cf2928c49a735499f3511d8e, type: 3}
   varekIntro: {fileID: 8300000, guid: fa87e8ad1794114468f3a835081b7462, type: 3}
-  worstending: {fileID: 8300000, guid: 7d934d82e62874448805409de293d000, type: 3}
+  worstending: {fileID: 8300000, guid: 8f7f6e0597e8605488d5f6e0de296c70, type: 3}
   zarastealing: {fileID: 8300000, guid: 5255c863c48acde4f9a7c5822d50db26, type: 3}
+  trackvarek: {fileID: 8300000, guid: 91dd0357ca0b42445a7225bee51ab33b, type: 3}
+  investigateartefact: {fileID: 8300000, guid: b81cc75ca28c92f4ca8d0f29ad2643c3, type: 3}
+  acceptoffer: {fileID: 8300000, guid: 460e0dac5e8a7bd4dbbd0b199c8f2e6f, type: 3}
+  declineoffer: {fileID: 8300000, guid: 460e0dac5e8a7bd4dbbd0b199c8f2e6f, type: 3}
+  developtool: {fileID: 8300000, guid: 2c07049f6a5ce8d49ab05a16ed28131c, type: 3}
+  integrateship: {fileID: 8300000, guid: 2c07049f6a5ce8d49ab05a16ed28131c, type: 3}
+  pirates_: {fileID: 8300000, guid: 8bc07c1da11e3e74b89422eb4d84f377, type: 3}
+  trickirates: {fileID: 8300000, guid: fa87e8ad1794114468f3a835081b7462, type: 3}
+  fightpirates: {fileID: 8300000, guid: fa87e8ad1794114468f3a835081b7462, type: 3}
+  negotiatepeace: {fileID: 8300000, guid: 7ceb1cc0c49c8b84aabeff393f0cf1bd, type: 3}
+  combatupgrade: {fileID: 8300000, guid: 2c07049f6a5ce8d49ab05a16ed28131c, type: 3}
+  recruitpirate: {fileID: 8300000, guid: 460e0dac5e8a7bd4dbbd0b199c8f2e6f, type: 3}
+  developcounter: {fileID: 8300000, guid: 2c07049f6a5ce8d49ab05a16ed28131c, type: 3}
+  improveship: {fileID: 8300000, guid: 2c07049f6a5ce8d49ab05a16ed28131c, type: 3}
+  planvarek: {fileID: 8300000, guid: e62edc4d4460976408c8c50eb2dfee5d, type: 3}
+  strategicsabotage: {fileID: 8300000, guid: 460e0dac5e8a7bd4dbbd0b199c8f2e6f, type: 3}
+  directassult: {fileID: 8300000, guid: 62b749d0a1ebe134f83ad9559eb90afb, type: 3}
+  collabgalactic: {fileID: 8300000, guid: 7ceb1cc0c49c8b84aabeff393f0cf1bd, type: 3}
+  collabbene: {fileID: 8300000, guid: 7ceb1cc0c49c8b84aabeff393f0cf1bd, type: 3}
+  collabpirates: {fileID: 8300000, guid: 7ceb1cc0c49c8b84aabeff393f0cf1bd, type: 3}
+  collabboth: {fileID: 8300000, guid: 7ceb1cc0c49c8b84aabeff393f0cf1bd, type: 3}
+  goodend: {fileID: 8300000, guid: 76d36e8863c983c4893501e2e9fef768, type: 3}
+  fight1vs1: {fileID: 8300000, guid: fa87e8ad1794114468f3a835081b7462, type: 3}
+  fight: {fileID: 8300000, guid: fa87e8ad1794114468f3a835081b7462, type: 3}
+  becomeanti: {fileID: 8300000, guid: 145f01f02872cc648bd4e811b2554649, type: 3}
+  loseartefact: {fileID: 8300000, guid: e62edc4d4460976408c8c50eb2dfee5d, type: 3}
+  artefactvszara: {fileID: 8300000, guid: 145f01f02872cc648bd4e811b2554649, type: 3}
+  neutralending1: {fileID: 8300000, guid: b04e9cf7788a88c4a9afa72c80fb91e7, type: 3}
+  neutralending2: {fileID: 8300000, guid: b04e9cf7788a88c4a9afa72c80fb91e7, type: 3}
+  neutralending3: {fileID: 8300000, guid: b04e9cf7788a88c4a9afa72c80fb91e7, type: 3}
+  useartefact: {fileID: 8300000, guid: fee06cbb195fc2e4d81b3052a9702b16, type: 3}
+  savezara: {fileID: 8300000, guid: fee06cbb195fc2e4d81b3052a9702b16, type: 3}
+  badend1: {fileID: 8300000, guid: e62edc4d4460976408c8c50eb2dfee5d, type: 3}
+  badend2: {fileID: 8300000, guid: e62edc4d4460976408c8c50eb2dfee5d, type: 3}
   _changeBackgroundImage: {fileID: 1952459664}
   _changeBlurImage: {fileID: 88317316}
   introduction: {fileID: 21300000, guid: 8224a1d4a799a2460911271b35b6e651, type: 3}
@@ -2982,6 +3016,48 @@ MonoBehaviour:
   recruitPirateBlurr: {fileID: 21300000, guid: 4531afccf57bf6049bc756e26267e815, type: 3}
   developCounter: {fileID: 21300000, guid: 2b5268b3adf46f946b5211a2026afdb6, type: 3}
   developCounterBlurr: {fileID: 21300000, guid: 86025931fd2c94f4f9a32c1241a2317c, type: 3}
+  improveShip: {fileID: 21300000, guid: 2b5268b3adf46f946b5211a2026afdb6, type: 3}
+  improveShipBlurr: {fileID: 21300000, guid: 86025931fd2c94f4f9a32c1241a2317c, type: 3}
+  planVarek: {fileID: 21300000, guid: 1d102af5af3919343a2c99e820722bda, type: 3}
+  planVarekBlurr: {fileID: 21300000, guid: 1f9e4da21b8b6d54abfdabbf484c8744, type: 3}
+  strategicSabotage: {fileID: 21300000, guid: 7a96da3066dfc5d4fac337e9d204cb9a, type: 3}
+  strategicSabotageBlurr: {fileID: 21300000, guid: aba3fa747b7faba469c400cafbfd8c48, type: 3}
+  directAssult: {fileID: 21300000, guid: 55ee2087a45f6d043905c68da9441b8e, type: 3}
+  directAssultBlurr: {fileID: 21300000, guid: dfcce145b54412d448d3a91be17713fb, type: 3}
+  collabGalactic: {fileID: 21300000, guid: ed8c6d6e787e006498356fa47b9e5e50, type: 3}
+  collabGalacticBlurr: {fileID: 21300000, guid: 9bf7906a0954b224dac4c554a1cb754e, type: 3}
+  collabBenef: {fileID: 21300000, guid: 49be453c5824247489eb9decbe436e4c, type: 3}
+  collabBenefBlurr: {fileID: 21300000, guid: cfdb39165c2935d4088493e84b912a45, type: 3}
+  collabPirates: {fileID: 21300000, guid: 49be453c5824247489eb9decbe436e4c, type: 3}
+  collabPiratesBlurr: {fileID: 21300000, guid: cfdb39165c2935d4088493e84b912a45, type: 3}
+  collabBoth: {fileID: 21300000, guid: b2d23e43ad67441409257e5fc7f5ca95, type: 3}
+  collabBothBlurr: {fileID: 21300000, guid: 6045c12d471085747a210daf4006e744, type: 3}
+  goodEnd: {fileID: 21300000, guid: dceafe6cab32cd1458c710a4a0d1b52d, type: 3}
+  goodEndBlurr: {fileID: 21300000, guid: a4d7a633a6f59ce44a52a0d8e7a3ad62, type: 3}
+  fight1vs1_: {fileID: 21300000, guid: 4ba4d819578346446a31a414b05b9ce8, type: 3}
+  fight1vs1Blurr: {fileID: 21300000, guid: 607535e2b9bea7b43b26bad2530ab26e, type: 3}
+  fight_: {fileID: 21300000, guid: 7a9ad6e8f52fa2d408a3b871c9aa07ae, type: 3}
+  fightBlurr: {fileID: 21300000, guid: bd5264e70679f164ab256bb93ba9f6a4, type: 3}
+  becomeAnti: {fileID: 21300000, guid: 43f00e351ba060642ab07f27bd5d0efb, type: 3}
+  becomeAntiBlurr: {fileID: 21300000, guid: bd5264e70679f164ab256bb93ba9f6a4, type: 3}
+  loseArtefact: {fileID: 21300000, guid: 584d4c814fc41f347b49ca58e9bc989d, type: 3}
+  loseArtefactBlurr: {fileID: 21300000, guid: ed6f8a6ab61227742ac35a52f82fcf87, type: 3}
+  artefactVSzara: {fileID: 21300000, guid: 2500bdb559b34e84a99737f8a8fead51, type: 3}
+  artefactVSzaraBlurr: {fileID: 21300000, guid: bc032af8996e6dc4da436ee3ae637500, type: 3}
+  neutralEnding1: {fileID: 21300000, guid: 6c60689b1ead2d44bbf7b4af13ca5f1a, type: 3}
+  neutralEnding1Blurr: {fileID: 21300000, guid: 4cc90442a4bb94240b689e60d3cbf8bc, type: 3}
+  neutralEnding2: {fileID: 21300000, guid: 48f0cabbe57e1ec4eb1bc319f92e6215, type: 3}
+  neutralEnding2Blurr: {fileID: 21300000, guid: f08e574a96dc2944cbc715ae9d31259a, type: 3}
+  neutralEnding3: {fileID: 21300000, guid: b8ebdff8ca7e6a745bf0f753146d5991, type: 3}
+  neutralEnding3Blurr: {fileID: 21300000, guid: 14070ade96ad1b9438c97d9d203a618b, type: 3}
+  useArtefact: {fileID: 21300000, guid: 1f8e7d999ae3c344d94e5ba80ff9341a, type: 3}
+  useArtefactBlurr: {fileID: 21300000, guid: dfb4fd6c6fbcbf94badb6f21adaf363e, type: 3}
+  saveZara: {fileID: 21300000, guid: 058a96cb0580c99459a804b57858549e, type: 3}
+  saveZaraBlurr: {fileID: 21300000, guid: fac523b5d7cf6c1469ee737a93ded1c0, type: 3}
+  badEnd1: {fileID: 21300000, guid: ac0585698ca9296458ac7b2896389266, type: 3}
+  badEnd1Blurr: {fileID: 21300000, guid: 96a1836732cde7249a8486552ca59dd7, type: 3}
+  badEnd2: {fileID: 21300000, guid: 32936bc51d0259047a8acf98bb4568a7, type: 3}
+  badEnd2Blurr: {fileID: 21300000, guid: f5abf1b9f2228ac41833de06ac0b264a, type: 3}
 --- !u!114 &1778995433
 MonoBehaviour:
   m_ObjectHideFlags: 0
