@@ -91,6 +91,14 @@ public class DialogueController : MonoBehaviour
        ContinueStory();
     
     }
+
+    public void LoadStory() {
+        CurrentStory = StorySerialization.Deserialize();
+    }
+
+    public void SaveStory() {
+        StorySerialization.Serialize(inkJSON);
+    }
 }
        
 
