@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
 
 [RequireComponent(typeof(DialogueChoice))]
 public class DialogueWindow : MonoBehaviour
@@ -15,9 +16,14 @@ public class DialogueWindow : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _displayEngineering;
     [SerializeField] private TextMeshProUGUI _displayCombat;
     [SerializeField] private TextMeshProUGUI _displayDiplomacy;
+    [SerializeField] private AudioSource _changeSceneMusic;
+    [SerializeField] private AudioClip intro;
+    [SerializeField] private AudioClip artifactintro;
+    [SerializeField] private AudioClip varekIntro;
+    [SerializeField] private AudioClip worstending;
+    [SerializeField] private AudioClip zarastealing;
     [SerializeField] private Image _changeBackgroundImage; // Reference to the UI Image component for the background
     [SerializeField] private Image _changeBlurImage;
-
     [SerializeField] private Sprite introduction;
     [SerializeField] private Sprite introductionBlurr;
     [SerializeField] private Sprite artefactIntro;
@@ -59,6 +65,7 @@ public class DialogueWindow : MonoBehaviour
 
 
     private DialogueChoice _dialogueChoice;
+    private DialogueController _dialogueController;
 
     public bool IsStatusAnswer { get; private set; }
     public bool IsPlaying { get; private set; }
@@ -72,6 +79,9 @@ public class DialogueWindow : MonoBehaviour
             _cooldownNewLetter = CheckCooldown(value);
         }
     }
+
+    
+
 
     private float CheckCooldown(float value)
     {
@@ -137,6 +147,7 @@ public class DialogueWindow : MonoBehaviour
         ClearText();
         UpdateSkillDisplays(story);
         UpdateBackgroundImage(story);
+        UpdateMusic(story);
         _dialogueChoice.HideChoices();
         CanContinueToNextLine = false;
         bool isAddingRichText = false;
@@ -192,6 +203,8 @@ public class DialogueWindow : MonoBehaviour
     }
 
 }
+
+
     public void UpdateBackgroundImage(Story story){
         object sceneSettingObj = story.variablesState["sceneSetting"];
         string sceneSetting = sceneSettingObj.ToString();
@@ -282,4 +295,43 @@ public class DialogueWindow : MonoBehaviour
         }
 
     }
+    public void UpdateMusic(Story story)
+    {
+        object sceneMusicObj = story.variablesState["music"];
+        string sceneMusic = sceneMusicObj.ToString();
+        Debug.Log($"Current sceneMusic: {sceneMusic}");
+        if (sceneMusic != null)
+        {
+            switch (sceneMusic)
+            {
+                case "intro":
+                    _changeSceneMusic.clip = intro;
+                    _changeSceneMusic.Play();
+                    break;
+                case "artifactintro":
+                    _changeSceneMusic.clip = artifactintro;
+                    _changeSceneMusic.Play();
+                    break;
+                case "varekintro":
+                    _changeSceneMusic.clip = varekIntro;
+                    _changeSceneMusic.Play();
+                    break;
+                case "giveartefact":
+                    break;
+                case "worstending":
+                    _changeSceneMusic.clip = worstending;
+                    _changeSceneMusic.Play();
+                    break;
+                case "zaraStealing":
+                    _changeSceneMusic.clip = zarastealing;
+                    _changeSceneMusic.Play();
+                    break;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("sceneMusic variable not found or is null in Ink story.");
+        }
+    }
 }
+                    
