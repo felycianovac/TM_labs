@@ -8,6 +8,8 @@ public class Grid : MonoBehaviour
 {
     public int width { get; private set; }
     public int height { get; private set; }
+
+    private Color dayColor = new Color(0.6f, 0.8f, 0.6f);
     private Cell[,] cells;
 
     public Grid(int width, int height)
@@ -56,7 +58,7 @@ public class Grid : MonoBehaviour
                 // }
             }
         }
-        Camera.main.backgroundColor = Color.white;
+        Camera.main.backgroundColor = dayColor;
     }
 
     public void PopulateCustom()
