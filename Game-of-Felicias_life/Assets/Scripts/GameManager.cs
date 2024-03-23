@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public bool isDayTime = true; // To track if it's currently day or night
     public float speed = 0.05f;
     private float timer = 0.0f;
-    private int updateCounter = 0;
+    public int updateCounter = 0;
 
 
     private int nrOfGenerations = int.MaxValue;
