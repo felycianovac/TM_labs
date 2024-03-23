@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class Zone : MonoBehaviour
 {
+    // toxicColor from GameManager.cs
+    private Color toxicColor, defaultColor, friendlyColor;
+
+    public Zone(Color toxicColor, Color defaultColor, Color friendlyColor)
+    {
+        this.toxicColor = toxicColor;
+        this.defaultColor = defaultColor;
+        this.friendlyColor = friendlyColor;
+    }
+
+    public void updateColors(Color toxicColor, Color defaultColor, Color friendlyColor)
+    {
+        this.toxicColor = toxicColor;
+        this.defaultColor = defaultColor;
+        this.friendlyColor = friendlyColor;
+    }
+
     public void ToxicZone(Grid grid, int x1, int y1, int x2, int y2)
     {
         for (int y = y1; y < y2; y++)
@@ -14,7 +31,7 @@ public class Zone : MonoBehaviour
                 if (grid.GetCells()[x, y].isAlive)
                 {
                     grid.GetCells()[x, y].isPoisoned = true;
-                    grid.GetCells()[x, y].SetColor(Color.green);
+                    grid.GetCells()[x, y].SetColor(toxicColor);
                 }
             }
         }
@@ -29,7 +46,7 @@ public class Zone : MonoBehaviour
                 if (!grid.GetCells()[x, y].isAlive)
                 {
                     grid.GetCells()[x, y].isFriendly = true;
-                    grid.GetCells()[x, y].SetColor(Color.blue);
+                    grid.GetCells()[x, y].SetColor(friendlyColor);
                 }
             }
         }
@@ -43,15 +60,15 @@ public class Zone : MonoBehaviour
             {
                 if (grid.GetCells()[x, y].isAlive)
                 {
-                    if (color == Color.green && grid.GetCells()[x, y].isPoisoned == true)
+                    if (color == toxicColor && grid.GetCells()[x, y].isPoisoned == true)
                     {
                         grid.GetCells()[x, y].isPoisoned = false;
-                        grid.GetCells()[x, y].SetColor(Color.black);
+                        grid.GetCells()[x, y].SetColor(defaultColor);
                     }
-                    else if (color == Color.blue && grid.GetCells()[x, y].isFriendly == true)
+                    else if (color == friendlyColor && grid.GetCells()[x, y].isFriendly == true)
                     {
                         grid.GetCells()[x, y].isFriendly = false;
-                        grid.GetCells()[x, y].SetColor(Color.black);
+                        grid.GetCells()[x, y].SetColor(defaultColor);
                     }
                 }
             }

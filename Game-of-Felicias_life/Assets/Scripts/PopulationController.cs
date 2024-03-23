@@ -3,7 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PopulationController : MonoBehaviour
+
 {
+    private Color toxicColor, defaultColor, friendlyColor;
+
+    public PopulationController(Color toxicColor, Color friendlyColor, Color defaultColor)
+    {
+        this.toxicColor = toxicColor;
+        this.friendlyColor = friendlyColor;
+        this.defaultColor = defaultColor;
+    }
+
+    public void updateColors(Color toxicColor, Color defaultColor, Color friendlyColor)
+    {
+        this.toxicColor = toxicColor;
+        this.defaultColor = defaultColor;
+        this.friendlyColor = friendlyColor;
+    }
+
+
+    void Start()
+    {
+        // Ensure GameManager instance is ready and access toxicColor
+        if (GameManager.Instance != null)
+        {
+            toxicColor = GameManager.Instance.toxicColor;
+            friendlyColor = GameManager.Instance.friendlyColor;
+            defaultColor = GameManager.Instance.defaultColor;
+        }
+        else
+        {
+            Debug.LogError("GameManager instance not found.");
+        }
+    }
     public void GeneralRules(Grid grid)
     {
         // Rules
@@ -27,22 +59,23 @@ public class PopulationController : MonoBehaviour
                     if (cells[x, y].numPoisonedNeighbors == 2 && ToggleHandler.ToxicZone)
                     {
                         cells[x, y].isPoisoned = true;
-                        cells[x, y].SetColor(Color.green);
+                        cells[x, y].SetColor(toxicColor);
                     }
                     else if (cells[x, y].numPoisonedNeighbors > cells[x, y].numFriendlyNeighbors)
                     {
                         cells[x, y].isPoisoned = true;
-                        cells[x, y].SetColor(Color.green);
+                        cells[x, y].SetColor(toxicColor);
+
                     }
                     if (cells[x, y].numFriendlyNeighbors == 2 && ToggleHandler.FriendlyZone)
                     {
                         cells[x, y].isFriendly = true;
-                        cells[x, y].SetColor(Color.blue);
+                        cells[x, y].SetColor(friendlyColor);
                     }
                     if (cells[x, y].isFriendly && (cells[x, y].numPoisonedNeighbors == 2 || cells[x, y].numPoisonedNeighbors == 3))
                     {
                         cells[x, y].isFriendly = false;
-                        cells[x, y].SetColor(Color.black);
+                        cells[x, y].SetColor(defaultColor);
                     }
                 }
                 else
@@ -50,6 +83,7 @@ public class PopulationController : MonoBehaviour
                     if (cells[x, y].numNeighbors == 3)
                     {
                         cells[x, y].SetAlive(true);
+                        cells[x, y].SetColor(defaultColor);
                     }
                 }
             }
@@ -103,6 +137,7 @@ public class PopulationController : MonoBehaviour
                     if (Random.Range(0, 100) < 50)
                     {
                         cells[x, y].SetAlive(false);
+                        
                     }
                 }
             }

@@ -9,14 +9,23 @@ public class Grid : MonoBehaviour
     public int width { get; private set; }
     public int height { get; private set; }
 
-    private Color dayColor = new Color(0.6f, 0.8f, 0.6f);
+    public Color defaultColor;
+
+    private Color dayBgColor = new Color(0.6f, 0.8f, 0.6f);
     private Cell[,] cells;
 
-    public Grid(int width, int height)
+
+    public Grid(int width, int height, Color defaultColor)
     {
         this.width = width;
         this.height = height;
+        this.defaultColor = defaultColor;
         cells = new Cell[width, height];
+    }
+
+    public void updateColors(Color defaultColor)
+    {
+        this.defaultColor = defaultColor;
     }
 
     public void SetCell(int x, int y, Cell cell)
@@ -48,6 +57,7 @@ public class Grid : MonoBehaviour
                 rand = Random.Range(0, 100);
                 isAlive = rand > 65 ? true : false;
                 cells[x, y].SetAlive(isAlive); // initial grid with random alive cells
+                cells[x, y].SetColor(defaultColor); // initial color of cells
 
                 if (isAlive)
                 {
@@ -58,7 +68,7 @@ public class Grid : MonoBehaviour
                 // }
             }
         }
-        Camera.main.backgroundColor = dayColor;
+        Camera.main.backgroundColor = dayBgColor;
     }
 
     public void PopulateCustom()
@@ -76,6 +86,7 @@ public class Grid : MonoBehaviour
                 {
                     Cell cell = Instantiate(Resources.Load("Prefabs/cell", typeof(Cell)), new Vector2(mouseX, mouseY), Quaternion.identity) as Cell;
                     cells[mouseX, mouseY] = cell;
+                    cells[mouseX, mouseY].SetColor(defaultColor);
                 }
 
                 // set the cell as alive
@@ -95,6 +106,7 @@ public class Grid : MonoBehaviour
                     Cell cell = Instantiate(Resources.Load("Prefabs/cell", typeof(Cell)), new Vector2(x, y), Quaternion.identity) as Cell;
                     cells[x, y] = cell;
                     cells[x, y].SetAlive(false);
+                    cells[x, y].SetColor(defaultColor);
                 }
             }
         }
