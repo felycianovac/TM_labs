@@ -67,7 +67,7 @@ public class PopulationController : MonoBehaviour
                         cells[x, y].SetColor(toxicColor);
 
                     }
-                    if (cells[x, y].numFriendlyNeighbors == 2 && ToggleHandler.FriendlyZone)
+                    if (cells[x, y].numFriendlyNeighbors == 3 && ToggleHandler.FriendlyZone)
                     {
                         cells[x, y].isFriendly = true;
                         cells[x, y].SetColor(friendlyColor);
