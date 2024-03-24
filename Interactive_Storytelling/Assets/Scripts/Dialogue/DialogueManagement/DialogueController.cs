@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
+using System;
 
 [RequireComponent(typeof(DialogueWindow), typeof(DialogueTag))]
 public class DialogueController : MonoBehaviour
@@ -12,6 +13,9 @@ public class DialogueController : MonoBehaviour
 
    public Story CurrentStory{get; private set;}
    private Coroutine _displayLineCoroutine;
+   // Example event declaration
+
+
 
    private void Awake()
    {
@@ -41,6 +45,7 @@ public class DialogueController : MonoBehaviour
     if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
         ContinueStory();
     }
+    OnStoryProgressed?.Invoke(); // Notify other components that the story has progressed
    }
    
     public void EnterDialogueMode(TextAsset inkJSON){
@@ -59,6 +64,7 @@ public class DialogueController : MonoBehaviour
  
 
     public void ContinueStory(){
+  
 
         if(CurrentStory.canContinue == false){
             StartCoroutine(ExitDialogueMode());
@@ -76,6 +82,8 @@ public class DialogueController : MonoBehaviour
             Debug.LogError(e.Message);
         }
     }
+    public static event System.Action OnStoryProgressed; // Define an event to notify other components
+
    
      public void MakeChoice(int choiceIndex){
        _dialogueWindow.MakeChoice();

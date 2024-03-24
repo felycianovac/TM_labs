@@ -21,7 +21,6 @@ public class DialogueChoice : MonoBehaviour
 
     public bool DisplayChoices(Story story){
         Choice[] currentChoices = story.currentChoices.ToArray();
-        print(currentChoices.Length);
         if(currentChoices.Length>_choices.Length){
             throw new ArgumentException("The number of choices is greater than the number of choices available");
         }

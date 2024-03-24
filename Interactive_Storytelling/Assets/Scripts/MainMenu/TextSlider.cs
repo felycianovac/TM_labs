@@ -11,9 +11,12 @@ public class TextSlider : MonoBehaviour
     void Start(){
         slider = GetComponent<Slider>();
         SetNumberText(slider.value);
+
     }
     
     public void SetNumberText(float value){
         numberText.text = value.ToString();
     }
+
+
 }
