@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b1f843a609e4742a3a00005be8cb52, type: 3}
+  m_Name: BalloonRecipe
+  m_EditorClassIdentifier: 
+  requirements:
+  - itemAsset: {fileID: 11400000, guid: c7b0c232f6135a64e8e75eab6f9923fd, type: 2}
+    quantity: 3
+  - itemAsset: {fileID: 11400000, guid: 7c0b54d43ef3f2940947b1b0c83b2682, type: 2}
+    quantity: 2
+  result: {fileID: 11400000, guid: 45a7f7cd35d894344a232451413534dd, type: 2}

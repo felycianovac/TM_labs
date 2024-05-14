@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be04271f3dec0bd48b5f85bf38d1e647, type: 3}
+  m_Name: Pumpkin
+  m_EditorClassIdentifier: 
+  _id: 59
+  _displayName: 
+  _texture: {fileID: 2800000, guid: fa0faa8f6360b7947b143e9356b3fb74, type: 3}
+  _tileAsset: {fileID: 11400000, guid: 7ba25a1fd70a8744e92f42aebf64dac1, type: 2}

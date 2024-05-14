@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee4508e29fca594d81a8c8c06c98898, type: 3}
+  m_Name: Penguin
+  m_EditorClassIdentifier: 
+  _id: 54
+  _maxHealth: 0
+  _tileCategory: 0
+  _texture: {fileID: 2800000, guid: 407d9d5c354340d4eb7cf87820336bf4, type: 3}
+  _specialTile: 0
+  _backgroundTile: 0
+  _displayName: 
+  _visible: 1
+  _solid: 0
+  _opaque: 0
+  _dropItem: 0
+  _light: {fileID: 0}
+  _droppedItem: {fileID: 0}
+  _ai: {fileID: 1409712732347110, guid: 6b6f9b9d9e1445041a3d38440b9b9f77, type: 2}

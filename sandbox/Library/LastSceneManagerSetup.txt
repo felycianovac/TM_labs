@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/[2DSANDBOX]/Scenes/World Scene/Test.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
